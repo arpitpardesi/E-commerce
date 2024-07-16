@@ -8,14 +8,25 @@
 <h1>Variable HTML File</h1>
 
 <p>
-    <b>First Name:</b> {{firstName}}<br>
-    <b>Last Name:</b>  {{lastName}}
+    <b>First Name:</b> {{firstName | upper}}<br>
+    <b>Last Name:</b> {{lastName}}
     <br><br>
     <b>List: </b>{{aList}}<br>
     <b>List (index): </b>{{aList.1}}
     <br><br>
     <b>Dict: </b>{{aNewDict}}<br>
     <b>Dict: </b>{{aNewDict.newKey}}
+    <br><br>
+
+    <h3>Loop</h3>
+    {% for item in aList %}
+        {% if item == 2 %}
+            <p> {{item}} is even </p>
+        {%else%}
+            <p> {{item}} is odd </p>
+        {%endif%}
+    {% endfor %}
+
 
 </p>
 </body>
