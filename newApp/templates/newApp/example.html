@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>New App</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+
+{% block content %}
 <h1>This is a New App under Ecommerce</h1>
 <br>
 
 <h3><a href="{% url 'newApp:variable'%}">Click here to go to view</a> </h3>
 
-</body>
-</html>
+{% endblock %}
+
