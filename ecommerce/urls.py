@@ -27,3 +27,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.home)
 ]
+
+handler404 = 'ecommerce.views.page_not_found'
