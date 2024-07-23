@@ -25,6 +25,7 @@ urlpatterns = [
     path('newApp/', include('newApp.urls')),
     path('myApp/', include('myApp.urls')),
     path('office/', include('office.urls')),
+    path('cars/', include('cars.urls')),
     path("admin/", admin.site.urls),
     path("", views.home)
 ]

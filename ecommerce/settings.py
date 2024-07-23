@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "newApp.apps.NewappConfig",
     "office.apps.OfficeConfig",
+    "cars.apps.CarsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

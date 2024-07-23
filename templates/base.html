@@ -8,6 +8,18 @@
 <h1>This is above block base file</h1>
 
 {% block content %}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+         <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="nav-link"><a href="{% url 'cars:list' %}">List</a></li>
+                <li class="nav-link"><a href="{% url 'cars:add' %}">Add</a></li>
+                <li class="nav-link"><a href="{% url 'cars:delete' %}">Delete</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
 {% endblock %}
 <h1>This is below block base file</h1>
