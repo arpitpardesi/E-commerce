@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "classroom.apps.ClassroomConfig",
     "newApp.apps.NewappConfig",
     "office.apps.OfficeConfig",
     "cars.apps.CarsConfig",

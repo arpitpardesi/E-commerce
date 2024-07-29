@@ -22,6 +22,7 @@ from . import views
 #     return HttpResponse("Home Page")
 
 urlpatterns = [
+    path('classroom/', include('classroom.urls')),
     path('newApp/', include('newApp.urls')),
     path('myApp/', include('myApp.urls')),
     path('office/', include('office.urls')),
