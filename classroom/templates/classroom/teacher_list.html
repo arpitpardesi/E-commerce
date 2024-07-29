@@ -9,7 +9,9 @@
 
 <ul>
     {% for teacher in teacher_list %}
-    <li>{{ teacher.fName }} {{teacher.lName}}</li>
+    <li><a href="/classroom/teacher_detail/{{teacher.id }}">
+        {{ teacher.fName }} {{teacher.lName}}
+    </a></li>
     {% endfor %}
 </ul>
 </body>
