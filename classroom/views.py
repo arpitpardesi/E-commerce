@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, FormView, CreateView, ListView, DetailView
-from .forms import ContactForm
+from django.views.generic import TemplateView, FormView, CreateView, ListView, DetailView, UpdateView, DeleteView
 from .models import Teacher
+from .forms import ContactForm
 
 # Create your views here.
 # def home_view(request):
@@ -45,3 +45,14 @@ class TeacherDetailView(DetailView):
     #  returns only one model entry using pk
     model = Teacher
     #  LOOKS FOR model_detail.html
+
+class TeacherUpdateView(UpdateView):
+    model = Teacher
+    #  going to share _form.html
+    fields = '__all__'
+    success_url = reverse_lazy('classroom:list_teacher')
+
+class TeacherDeleteView(DeleteView):
+    model = Teacher
+    # its a form whts has a delete confirmation button and looks for model_confirm_delete.html
+    success_url = reverse_lazy('classroom:list_teacher')
