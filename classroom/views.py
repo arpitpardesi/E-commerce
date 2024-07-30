@@ -32,7 +32,7 @@ class ContactFormView(FormView):
 class TeacherCreateView(CreateView):
     model = Teacher
     fields = '__all__'
-    # it will automaticall look for the template
+    # it will automatically look for the template
     success_url = reverse_lazy('classroom:thankyou')
 
 class TeacherListView( ListView):
@@ -54,5 +54,5 @@ class TeacherUpdateView(UpdateView):
 
 class TeacherDeleteView(DeleteView):
     model = Teacher
-    # its a form whts has a delete confirmation button and looks for model_confirm_delete.html
+    # its a form which has a delete confirmation button and looks for model_confirm_delete.html file
     success_url = reverse_lazy('classroom:list_teacher')
