@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 from django.http.response import HttpResponse
 from . import views
 
@@ -22,13 +23,15 @@ from . import views
 #     return HttpResponse("Home Page")
 
 urlpatterns = [
+    path('catalog/', include('catalog.urls')),
     path('classroom/', include('classroom.urls')),
     path('newApp/', include('newApp.urls')),
     path('myApp/', include('myApp.urls')),
     path('office/', include('office.urls')),
     path('cars/', include('cars.urls')),
     path("admin/", admin.site.urls),
-    path("", views.home)
+    path('', RedirectView.as_view(url='catalog/'))
+    # path("", views.home)
 ]
 
 handler404 = 'ecommerce.views.page_not_found'
