@@ -30,6 +30,7 @@ urlpatterns = [
     path('office/', include('office.urls')),
     path('cars/', include('cars.urls')),
     path("admin/", admin.site.urls),
+    path("accounts/", include('django.contrib.auth.urls')),
     path('', RedirectView.as_view(url='catalog/'))
     # path("", views.home)
 ]
