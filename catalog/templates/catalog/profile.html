@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+</head>
+<body>
+<h1>User Profile</h1>
+
+<h3>Here are you checked out books:</h3>
+{% for book in bookinstance_list %}
+<p>{{book}}</p>
+{% endfor %}
+</body>
+</html>
